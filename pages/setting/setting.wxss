@@ -1,0 +1,6 @@
+/* pages/setting/setting.wxss */
+.title{
+  font-size: 72dp;
+  color: #ff00ff
+
+}

@@ -1,0 +1,43 @@
+<view class="content">  
+  <text class='title'>我的家</text>
+  <button class='btn_safe' bindtap='gotoSafe'> </button>  
+</view>
+
+<text>情景模式</text>
+<view class="content">
+  <view wx:for="{{scenename}}" wx:key="item"> 
+  <button class="btn_scene" id="{{key}}">{{item}}</button>
+  </view>
+
+  <button bindtap="bindViewTap" class='btn_add'>+</button>
+  <view>
+    <modal title="添加情景" hidden="{{modalHidden}}" confirm-text="确定"
+    cancel-text="取消" bindconfirm="modalBindaconfirmS" bindcancel="modalBindcancel">
+      <input placeholder='情景名称' maxlength='11' bindinput='getSInput'/>
+    </modal>
+  </view>
+
+</view>
+
+
+
+
+<text>设备管理</text>
+<view class='content'>
+  <view wx:for="{{equipname}}" wx:key="item"> 
+  <button class="btn_equip" id="{{key}}" bindtap='gotoEquip'>{{item}}</button>
+  </view>
+
+  <button bindtap="bindViewTap" class='btn_add'>+</button>
+  <view >
+    <modal title="添加设备" hidden="{{modalHidden}}" confirm-text="确定"
+    cancel-text="取消" bindconfirm="modalBindaconfirm" bindcancel="modalBindcancel">
+      <input placeholder='设备名称' maxlength='11' bindinput='getInput'/>
+    </modal>
+  </view>
+
+</view>
+
+
+
+

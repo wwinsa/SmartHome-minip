@@ -1,0 +1,43 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/setting/setting",
+    "pages/manage/manage",
+    "pages/equip/equip",
+    "pages/scene/scene",
+    "pages/safe/safe",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "images/home_select.png",
+        "iconPath": "images/home.png",
+        "pagePath": "pages/home/home",
+        "text": "HOME"
+      },
+      {
+        "selectedIconPath": "images/set_select.png",
+        "iconPath": "images/set.png",
+        "pagePath": "pages/setting/setting",
+        "text": "SET"
+      },
+      {
+        "selectedIconPath": "images/person2.png",
+        "iconPath": "images/person1.png",
+        "pagePath": "pages/manage/manage",
+        "text": "MAN"
+      }
+    ]
+  }
+}

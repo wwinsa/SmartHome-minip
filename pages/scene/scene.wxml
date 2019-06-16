@@ -1,0 +1,24 @@
+<text>情景模式</text>
+
+<text>定时</text>
+
+<!--下拉框  -->
+    <view class='list-msg2' bindtap='bindShowMsg'>
+        <text>{{tihuoWay}}</text>
+        <image style='height:20rpx;width:20rpx;' src='/images/down.png'></image>
+    </view>
+
+<!-- 下拉需要显示的列表 -->
+    <view class="select_box" wx:if="{{select}}">
+        <view class="select_one" bindtap="mySelect" data-name="1">1小时</view>
+        <view class="select_one" bindtap="mySelect" data-name="2">2小时</view>
+        <view class="select_one" bindtap="mySelect" data-name="3">3小时</view>
+    </view>
+
+
+
+
+<view class="container">
+  <button type='primary' style='margin-bottom:40px;' bindtap='startSetInter'>开始</button>
+  <button type='primary' bindtap='endSetInter'>结束</button>
+</view>

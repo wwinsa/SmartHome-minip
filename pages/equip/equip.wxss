@@ -1,0 +1,18 @@
+.artImg {
+  width: 30%;
+}
+ 
+.art {
+  width: 70%;
+}
+ 
+.artImg image {
+  width: 100%;
+  height: 150rpx;
+}
+ 
+.content {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,9 @@
+<view class='content'>
+<block wx:for="{{artlist}}">
+  <view class='art'>{{item.art}}</view>
+  <view class='artImg'>
+    <image src='{{item.imag}}'></image>
+  </view>
+  
+</block>
+</view>
