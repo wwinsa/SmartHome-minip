@@ -1,4 +1,5 @@
-// pages/equip/equip.js
+var SERVER_PATH = "http://服务器IP/处理该请求的文件";//定义服务器地址
+
 Page({
 
   /**
@@ -18,6 +19,22 @@ Page({
    */
   onLoad: function (options) {
 
+  },
+
+  //send
+  sendRequest: function () {
+    wx.request({
+      url: '复制的链接', //仅为示例，并非真实的接口地址
+      data: {
+        string: 'add',// 请求参数
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+        console.log(res.data)
+      }
+    })
   },
 
   /**

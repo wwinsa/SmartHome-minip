@@ -1,3 +1,4 @@
+<!-- 模拟显示 -->
 <view class='content'>
 <block wx:for="{{artlist}}" wx:key="item">
   <view class='art'>{{item.art}}</view>
@@ -7,3 +8,8 @@
   
 </block>
 </view>
+
+<!-- 蓝牙功能 -->
+
+<!-- 连数据库 -->
+<button type='primary' bindtap='sendRequest'>请求数据</button>
