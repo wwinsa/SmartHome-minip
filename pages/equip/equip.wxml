@@ -1,5 +1,5 @@
 <view class='content'>
-<block wx:for="{{artlist}}">
+<block wx:for="{{artlist}}" wx:key="item">
   <view class='art'>{{item.art}}</view>
   <view class='artImg'>
     <image src='{{item.imag}}'></image>

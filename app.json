@@ -1,11 +1,10 @@
 {
   "pages":[
-    "pages/scene/scene",
     "pages/home/home",
     "pages/setting/setting",
     "pages/manage/manage",
     "pages/equip/equip",
-    
+    "pages/scene/scene",
     "pages/safe/safe",
     "pages/index/index",
     "pages/logs/logs"

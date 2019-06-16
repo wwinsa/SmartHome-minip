@@ -10,17 +10,12 @@ Page({
   data: {
     modalHidden:true,
     tempname:'',
-    Sname: '',
     equipname: new Array(),
     scenename: new Array(),
-    info: {
-      scene:'',
-      equip:''
-    }
+    
   },
-
+  //  Scene
   //弹窗
-
   bindViewTap: function () {
     this.setData({
       modalHidden: !this.data.modalHidden
@@ -31,60 +26,23 @@ Page({
   //确定按钮点击事件---scene
   modalBindaconfirm: function () {
     var that = this;
-    var equipname = this.data.equipname;
     var scenename = this.data.scenename;
-    var Sname = this.data.Sname;
-    var info = this.data.info;
-    scenename.push(Sname);
+    var tempname = this.data.tempname;
+
+    scenename.push(tempname);
 
     this.setData({
       modalHidden: !this.data.modalHidden,
       scenename: scenename,
-      info:{
-        scene: scenename,
-        equip: equipname,
-      }
     })
 
     console.log("scene->" + scenename + "length:" + scenename.length);
-    console.log("info->" + info);
 
     wx.getSystemInfo({
       success: function (res) {
         that.setData({
           //btn
           scenename: scenename
-        })
-      }
-    })
-
-  },
-  //确定按钮点击事件---equipment
-  modalBindaconfirm: function () {
-    var that = this;
-    var equipname = this.data.equipname;
-    var scenename = this.data.scenename;
-    var tempname = this.data.tempname;
-    var info = this.data.info;
-    equipname.push(tempname);
-
-    this.setData({
-      modalHidden: !this.data.modalHidden,
-      equipname : equipname,
-      info: {
-        scene: scenename,
-        equip: equipname,
-      }
-    })
-    
-    console.log("equip->"+equipname+"length:"+equipname.length);
-    console.log("info->" + info.scene + "--" + info.equip);
-
-    wx.getSystemInfo({
-      success: function (res) {
-        that.setData({
-          //btn
-          equipname: equipname
         })
       }
     })
@@ -105,36 +63,10 @@ Page({
     
     //console.log(equipname);
   },
-  getSInput: function (e) {
-    var Sname = this.data.Sname;
-    this.setData({
-      Sname: e.detail.value,
-    })
-
-    //console.log(equipname);
-  },
 
 
-  addScene: function () {
-    var that = this;
-    var equipname = this.data.equipname;
-
-    wx.getSystemInfo({
-      success: function (res) {
-        that.setData({
-          //view
-          className_height: res.windowHeight / equipname.length,
-          //btn
-          array: equipname,
-        })
-      }
-    })
-    console.log("fresh->" + equipname);
-  },
-
-  gotoEquip: function(){
+  gotoScene: function(){
     wx.navigateTo({
-      // url: '../equip/equip',
       url: '../scene/scene',
     })
   },
@@ -142,6 +74,12 @@ Page({
     wx.navigateTo({
       // url: '../equip/equip',
       url: '../safe/safe',
+    })
+  },
+  gotoEquip: function () {
+    wx.navigateTo({
+      url: '../equip/equip',
+      
     })
   },
 
