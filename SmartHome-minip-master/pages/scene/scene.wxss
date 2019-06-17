@@ -1,0 +1,12 @@
+
+.section{
+   background:#CABBC7;
+   margin:20rpx;
+   padding:20rpx
+ 
+}
+
+.hori{
+  display: flex;
+  flex-direction: row;
+}

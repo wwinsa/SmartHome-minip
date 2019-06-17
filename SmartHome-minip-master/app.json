@@ -1,0 +1,47 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/setting/setting",
+    "pages/manage/manage",
+    "pages/equip/equip",
+    "pages/scene/scene",
+    "pages/safe/safe",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#F99FB6",
+    "backgroundColor":"pink",
+    "navigationBarTitleText": "Smart Home",
+    "navigationBarTextStyle":"white",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "images/home_select.png",
+        "iconPath": "images/home.png",
+        "pagePath": "pages/home/home",
+        "text": "HOME"
+      },
+      {
+      "selectedIconPath":
+      "images/shopping_select.png",
+        "iconPath": "images/shopping.png",
+        "pagePath": "pages/manage/manage",
+        "text": "SHOP"
+      },
+      {
+        "selectedIconPath": "images/set_select.png",
+        "iconPath": "images/set.png",
+        "pagePath": "pages/setting/setting",
+        "text": "MY"
+      }
+      
+    ]
+  }
+}

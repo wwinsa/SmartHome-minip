@@ -1,0 +1,27 @@
+<text>情景模式</text>  
+
+<view class="section">  
+  <picker mode="date" value="{{date}}" start="2019-01-01" end="2020-01-01" bindchange="bindDateChange">  
+    <view class="picker">  
+      设定日期: {{dates}}  
+    </view>  
+  </picker>  
+</view>
+
+<view class="section">  
+  <picker mode="time" value="{{time}}" start="00:00" end="23:59" bindchange="bindTimeChange">  
+    <view class="picker">  
+     设定时间 : {{times}}
+    </view>  
+  </picker> 
+</view>
+
+<button bindtap='timeon'>定时启用</button>
+
+<text>设备</text>
+
+
+<view class='hori'>
+  <button>启用</button>
+  <button>删除</button>
+</view>

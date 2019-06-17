@@ -1,0 +1,41 @@
+<view class="content">  
+<view class="content1">  
+  <text class='info'>MY HOME</text>
+  <image src='../../images/home.png' mode="widthFix" mode="heightFix"></image>
+  </view>
+  <button class='btn_safe' bindtap='gotoSafe'>设备自检 </button>  
+</view>
+
+<view class='newsblock'>  
+   
+     <view><text class ="blocktitle">情景模式</text></view>
+     
+    
+
+<view class="content">
+  <view wx:for="{{scenename}}" wx:key="item"> 
+  <button class="btn_scene" id="{{key}}" bindtap='gotoScene'>{{item}}</button>
+  </view>
+
+  <button bindtap="bindViewTap" >+添加情景模式</button>
+  <view>
+    <modal title="添加情景" hidden="{{modalHidden}}" confirm-text="确定"
+    cancel-text="取消" bindconfirm="modalBindaconfirm" bindcancel="modalBindcancel">
+      <input placeholder='情景名称' maxlength='11' bindinput='getInput'/>
+    </modal>
+  </view>
+
+
+</view>
+</view>
+
+<text>设备管理</text>
+<button bindtap='gotoEquip'>+添加设备</button>
+
+
+
+
+
+
+
+
