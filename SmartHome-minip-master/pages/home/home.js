@@ -1,16 +1,18 @@
 // pages/home/home.js
 
+
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    modalHidden: true,
-    tempname: '',
+    modalHidden:true,
+    tempname:'',
     equipname: new Array(),
     scenename: new Array(),
-    artlist: [],
+    
   },
   //  Scene
   //弹窗
@@ -20,7 +22,7 @@ Page({
     })
 
   },
-
+  
   //确定按钮点击事件---scene
   modalBindaconfirm: function () {
     var that = this;
@@ -53,45 +55,39 @@ Page({
     })
   },
 
-  getInput: function (e) {
+  getInput: function(e){
     var tempname = this.data.tempname;
     this.setData({
-      tempname: e.detail.value,
+        tempname: e.detail.value,
     })
+    
+    //console.log(equipname);
   },
 
 
-  gotoScene: function () {
+  gotoScene: function(){
     wx.navigateTo({
       url: '../scene/scene',
     })
   },
   gotoSafe: function () {
     wx.navigateTo({
+      // url: '../equip/equip',
       url: '../safe/safe',
     })
   },
   gotoEquip: function () {
-    var that = this;
-
     wx.navigateTo({
       url: '../equip/equip',
-
+      
     })
-
   },
 
-  test: function () {
-    const app = getApp();
-
-    console.log(app.globalData.equipInfo);
-  },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
   },
 
   /**
@@ -105,7 +101,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    
   },
 
   /**

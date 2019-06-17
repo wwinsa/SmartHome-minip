@@ -3,16 +3,15 @@
   <text class='info'>MY HOME</text>
   <image src='../../images/home.png' mode="widthFix" mode="heightFix"></image>
   </view>
-  <button  bindtap='gotoSafe'>设备自检 </button>  
+  <button class='btn_safe' bindtap='gotoSafe'>设备自检 </button>  
 </view>
-
-<view class='newsblock'>  
+ 
    
      <view><text class ="blocktitle">情景模式</text></view>
      
     
 
-<view class="content">
+
   <view wx:for="{{scenename}}" wx:key="item"> 
   <button class="btn_scene" id="{{key}}" bindtap='gotoScene'>{{item}}</button>
   </view>
@@ -26,8 +25,8 @@
   </view>
 
 
-</view>
-</view>
+
+
 
 <text>设备管理</text>
 <button bindtap='gotoEquip'>+添加设备</button>
