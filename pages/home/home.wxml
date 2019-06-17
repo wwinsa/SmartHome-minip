@@ -21,7 +21,7 @@
 
 <text>设备管理</text>
 <button bindtap='gotoEquip'>+添加设备</button>
-
+<button bindtap='test'>123</button>
 
 
 

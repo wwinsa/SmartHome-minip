@@ -1,4 +1,4 @@
-var SERVER_PATH = "http://服务器IP/处理该请求的文件";//定义服务器地址
+var SERVER_PATH = "https://192.144.180.173/main.php";//定义服务器地址
 
 Page({
 
@@ -18,23 +18,31 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    
   },
+
 
   //send
   sendRequest: function () {
     wx.request({
-      url: '复制的链接', //仅为示例，并非真实的接口地址
+      url: SERVER_PATH, 
       data: {
-        string: 'add',// 请求参数
+        string: 'addDevtoEqp',// 请求参数
       },
       header: {
         'content-type': 'application/json' // 默认值
       },
       success: function (res) {
+        console.log("success");
         console.log(res.data)
       }
     })
+    console.log("1");
+  },
+
+  back: function(){
+    const app = getApp();
+    app.globalData.equipInfo = '123';
   },
 
   /**

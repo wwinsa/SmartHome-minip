@@ -12,7 +12,7 @@ Page({
     tempname:'',
     equipname: new Array(),
     scenename: new Array(),
-    
+    artlist:[],
   },
   //  Scene
   //弹窗
@@ -60,8 +60,6 @@ Page({
     this.setData({
         tempname: e.detail.value,
     })
-    
-    //console.log(equipname);
   },
 
 
@@ -72,22 +70,30 @@ Page({
   },
   gotoSafe: function () {
     wx.navigateTo({
-      // url: '../equip/equip',
       url: '../safe/safe',
     })
   },
   gotoEquip: function () {
+    var that = this;
+    
     wx.navigateTo({
       url: '../equip/equip',
-      
+
     })
+    
   },
 
+  test: function(){
+    const app = getApp();
+    
+    console.log(app.globalData.equipInfo);
+  },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    
   },
 
   /**
@@ -101,7 +107,27 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    
+
+    let pages = getCurrentPages();
+
+    let currPage = pages[pages.length - 1];
+
+    if (currPage.data.addresschose) {
+
+      this.setData({
+
+        //将携带的参数赋值
+
+        artlist: currPage.data.artlist,
+
+        // addressBack: true
+
+      });
+
+      console.log(this.data.artlist)
+
+    }
+
   },
 
   /**

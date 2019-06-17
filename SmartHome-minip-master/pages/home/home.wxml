@@ -3,7 +3,7 @@
   <text class='info'>MY HOME</text>
   <image src='../../images/home.png' mode="widthFix" mode="heightFix"></image>
   </view>
-  <button class='btn_safe' bindtap='gotoSafe'>设备自检 </button>  
+  <button  bindtap='gotoSafe'>设备自检 </button>  
 </view>
 
 <view class='newsblock'>  

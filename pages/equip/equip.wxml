@@ -13,3 +13,4 @@
 
 <!-- 连数据库 -->
 <button type='primary' bindtap='sendRequest'>请求数据</button>
+<button type='primary' bindtap='back'>back</button>
